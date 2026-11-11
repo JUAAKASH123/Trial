@@ -6,8 +6,8 @@ import Custome_Hook from './custom_hook';
 import { useNavigate } from 'react-router-dom';
 function Home() {
 
-    const userdetail=JSON.parse(localStorage.getItem('Signup Data')||'{}');
-    const token = userdetail?.token;
+    const token = localStorage.getItem('Login Token');
+    
     const navigate=useNavigate();
 
     useEffect(()=>{
