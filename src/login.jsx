@@ -27,11 +27,14 @@ function Login() {
         const registerInfo = JSON.parse(localStorage.getItem('Signup Data') || `null`);
         console.log(registerInfo);
 
+        const validUser = registerInfo.find((user) => {
+            return user.username === formLogin.usernames &&
+                user.password === formLogin.passwords;
+        });
 
-
-        if (formLogin.usernames == registerInfo.username && formLogin.passwords == registerInfo.password) {
+        if (validUser) {
             const token = crypto.randomUUID();
-            localStorage.setItem("Login Token",token);
+            localStorage.setItem("Login Token", token);
             alert("Login Sucssfull");
             navigate('/login');
         } else {
