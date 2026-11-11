@@ -16,10 +16,8 @@ function MyNavbar() {
     const navigate = useNavigate();
 
     const handleLogOut = () => {
-        const userData = JSON.parse(localStorage.getItem('Signup Data') || '{}');
-        delete userData.token;
 
-        localStorage.setItem('Signup Data', JSON.stringify(userData));
+        const [token,setToken]=JSON.parse(localStorage.getItem("Login Token"));
 
         setToken(null);
         navigate('/login');

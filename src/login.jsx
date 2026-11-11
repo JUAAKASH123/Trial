@@ -24,25 +24,16 @@ function Login() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const registerInfo = JSON.parse(localStorage.getItem('Signup Data')|| `null`);
+        const registerInfo = JSON.parse(localStorage.getItem('Signup Data') || `null`);
         console.log(registerInfo);
 
-        const token = crypto.randomUUID();
-
-        const updatedUserData = {
-            ...registerInfo,
-            token: token
-        };
 
 
         if (formLogin.usernames == registerInfo.username && formLogin.passwords == registerInfo.password) {
-            localStorage.setItem(
-                'Signup Data',
-                JSON.stringify(updatedUserData)
-            );
+            const token = crypto.randomUUID();
+            localStorage.setItem("Login Token",token);
             alert("Login Sucssfull");
-            navigate('/login')
-            window.location.reload();
+            navigate('/login');
         } else {
             alert("Login Failed")
         }
