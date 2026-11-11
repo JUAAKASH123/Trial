@@ -1,0 +1,17 @@
+.banner{
+    display: flex;
+    gap:10px;
+
+    padding:10px 10px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.hero::-webkit-scrollbar {
+    display: none;
+}
+.banner-img{
+    width: 240px;
+    height: 400px;
+    border-radius: 10px;
+}

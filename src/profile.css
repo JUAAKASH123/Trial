@@ -1,0 +1,23 @@
+.continer{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+    padding:80px;
+
+}
+.cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    background-color:darkkhaki;
+    padding:60px;
+    border-radius: 10px;
+}
+.det{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
