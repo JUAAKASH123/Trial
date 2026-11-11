@@ -36,7 +36,7 @@ function Login() {
             const token = crypto.randomUUID();
             localStorage.setItem("Login Token", token);
             alert("Login Sucssfull");
-            navigate('/login');
+            navigate('/home');
         } else {
             alert("Login Failed")
         }
